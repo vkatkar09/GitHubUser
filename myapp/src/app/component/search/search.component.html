@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-1 form-group inner-addon left-addon">
+            <i class="fa fa-search  icon"></i>
+            <input type="search" class="form-control" id="search" placeholder="Search here.." name="search" 
+            [(ngModel)]="searchModel" (keyup.enter)="Search()"/>
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-md-8">
+               <div class="row">
+                    <div class="col-md-3" *ngFor="let follower of followerData ">
+                        <img class="img img-thumbnail" src="{{follower.avatar_url}}">
+                        <h6>{{follower.login}}</h6>
+                     </div>
+                </div>
+                 
+            </div>
+
+
+        <div class="col-md-4" *ngIf="userData">
+            <div class="row">
+                <div class="col-md-6">                    
+                <img class="img img-thumbnail" src="{{userData.avatar_url}}">
+                </div>
+                <div class="col-md-6">
+                        <h4>{{userData.login}}</h4>
+                        <strong>ID : {{userData.id}}</strong>
+                </div>
+            </div>
+
+                
+              <p> <strong>Location : </strong>{{userData.location}} </p>
+              <p> <strong>Blog : </strong>{{userData.blog}} </p>
+              <p> <strong>Followers : </strong> {{userData.followers}} </p>
+              <p> <strong>Following : </strong>{{userData.following}} </p>
+        </div>
+       
+    </div>
+</div>
+

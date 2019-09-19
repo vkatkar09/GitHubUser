@@ -1,0 +1,22 @@
+.container {
+    margin-top: 20px;
+}
+.inner-addon { 
+    position: relative; 
+}
+
+.inner-addon .icon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+    margin-left: 15px;
+  }
+
+
+
+.left-addon .icon  { left:  0px;}
+/* .right-addon .icon { right: 0px;} */
+
+
+.left-addon input  { padding-left:  30px; }
+/* .right-addon input { padding-right: 30px; } */
